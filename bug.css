@@ -1,0 +1,1 @@
+This bug occurs when using Tailwind CSS's `@apply` directive with a complex or nested styles.  The issue manifests as unexpected styles or complete style overwrites, often leading to visual inconsistencies. The root cause is often an order of operations issue where the `@apply` directive isn't correctly resolving the CSS cascade or interacts improperly with other CSS rules.
