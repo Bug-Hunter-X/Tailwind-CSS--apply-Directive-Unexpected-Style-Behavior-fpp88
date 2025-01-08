@@ -1,0 +1,29 @@
+This solution addresses the bug by restructuring the CSS rules and using more specific selectors to avoid conflicts when employing the `@apply` directive.  It prioritizes the proper order of CSS declarations in the stylesheet to manage the cascading behavior.
+
+```css
+/* bug.css - Demonstrates the problem */
+.container {
+  @apply bg-gray-100 p-4;
+}
+
+.item {
+  @apply bg-blue-500 text-white p-2;
+}
+
+/*Conflicting styles*/
+.item {
+  background-color: red !important;
+}
+
+/* bugSolution.css - Demonstrates the solution */
+.container {
+  background-color: gray;
+  padding: 4px;
+}
+
+.item {
+  background-color: blue;
+  color: white;
+  padding: 2px;
+}
+```
